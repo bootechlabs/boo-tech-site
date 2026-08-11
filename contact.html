@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Boo-Tech</title>
+<meta name="description" content="Get in touch with Boo-Tech about HITRUST readiness, the Governance Accelerators, or consulting support.">
+<link rel="icon" type="image/png" href="assets/img/Boo-tech-blue-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a href="index.html" class="brand">
+      <img src="assets/img/Boo-tech-blue-logo.png" alt="Boo-Tech">
+      <span>BOO-TECH</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#products">Products</a></li>
+        <li><a href="resources.html">Free Resources</a></li>
+        <li><a href="documentation.html">Documentation</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <h1>Contact Us</h1>
+    <p>Questions about a product, implementation support, or HITRUST readiness consulting? Reach out.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container" style="max-width:600px;">
+    <form class="capture-form" id="boo-tech-contact-form" method="POST" target="boo-tech-contact-iframe" action="https://e659984a.sibforms.com/v2/serve/MUIFAE_4-xvm0aV-HEUxI6j3sW9asVn-0mikQzP7UIoqIYBSLfS9Xd3KNnif1Fry_W2ELMJCLZOhHNRSz3R0olPLqmjK1VXvSaxkEJ0A0nIcyWkO5LCE-LuAfXpWho0xSoZlwA075l3GsMKxLUSXxt_NpjXdQixCoQZLFNk7gmd_GstODlJkZvWANUW64LqKPkX9y3rbV_uMrVffag==">
+      <label for="c-firstname">First Name</label>
+      <input type="text" id="c-firstname" name="FIRSTNAME" required>
+      <label for="c-lastname">Last Name</label>
+      <input type="text" id="c-lastname" name="LASTNAME" required>
+      <label for="c-company">Company</label>
+      <input type="text" id="c-company" name="COMPANY:name" required>
+      <label for="c-email">Email</label>
+      <input type="email" id="c-email" name="EMAIL" required>
+      <label for="c-message">Message</label>
+      <textarea id="c-message" name="MESSAGE" rows="5" maxlength="500" required></textarea>
+      <input type="text" name="email_address_check" value="" style="display:none !important" tabindex="-1" autocomplete="off">
+      <input type="hidden" name="locale" value="en">
+      <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
+      <button type="submit" class="btn btn-primary" style="width:100%;">Send Message</button>
+    </form>
+    <p class="form-success" id="contact-form-success" style="display:none; color:var(--royal-blue); margin-top:14px; margin-bottom:0;">Thanks for reaching out — we'll be in touch shortly.</p>
+    <p style="font-size:0.8rem; margin-top:12px;">This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a> and <a href="https://policies.google.com/terms" target="_blank" rel="noopener">Terms of Service</a> apply.</p>
+    <iframe name="boo-tech-contact-iframe" id="boo-tech-contact-iframe" style="display:none;" title="form submission target"></iframe>
+    <script>
+      (function () {
+        var form = document.getElementById('boo-tech-contact-form');
+        var iframe = document.getElementById('boo-tech-contact-iframe');
+        var successMsg = document.getElementById('contact-form-success');
+        var hasSubmitted = false;
+
+        iframe.addEventListener('load', function () {
+          if (!hasSubmitted) return; // ignore the iframe's initial blank load
+          Array.prototype.forEach.call(form.querySelectorAll('input, textarea, button'), function (el) {
+            el.disabled = true;
+          });
+          successMsg.style.display = 'block';
+        });
+
+        form.addEventListener('submit', function (e) {
+          var thisForm = this;
+          e.preventDefault();
+          grecaptcha.ready(function () {
+            grecaptcha.execute('6LephGgtAAAAAAckLsnCG2yakeOKh2MhZ_28B7Vw', { action: 'submit' }).then(function (token) {
+              document.getElementById('g-recaptcha-response').value = token;
+              hasSubmitted = true;
+              thisForm.submit();
+            });
+          });
+        });
+      })();
+    </script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LephGgtAAAAAAckLsnCG2yakeOKh2MhZ_28B7Vw&hl=en" async defer></script>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <img src="assets/img/Boo-tech-white-logo.png" alt="Boo-Tech" style="height:48px; margin-bottom:12px;">
+      <p style="color:rgba(255,255,255,0.6); font-size:0.9rem; max-width:280px;">Helping organizations simplify security, governance, and HITRUST readiness.</p>
+    </div>
+    <div>
+      <h4>Products</h4>
+      <ul>
+        <li><a href="products/e1.html">e1 Governance Accelerator</a></li>
+        <li><a href="products/i1.html">i1 Security Operations Accelerator</a></li>
+        <li><a href="products/r2.html">r2 Enterprise Security Accelerator</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="resources.html">Free Resources</a></li>
+        <li><a href="documentation.html">Documentation</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="documentation.html#privacy">Privacy Policy</a></li>
+        <li><a href="documentation.html#terms">Terms</a></li>
+        <li><a href="documentation.html#license">License Agreement</a></li>
+        <li><a href="documentation.html#refunds">Refund Policy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom container">
+    <span>&copy; <span id="year"></span> Boo-Tech. All rights reserved.</span>
+    <span>boo-tech.com</span>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

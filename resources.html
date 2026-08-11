@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Resources | Boo-Tech</title>
+<meta name="description" content="Free HITRUST readiness resources — ISMP policy outline, readiness checklist, evidence collection checklist, and BUID crosswalk sample.">
+<link rel="icon" type="image/png" href="assets/img/Boo-tech-blue-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a href="index.html" class="brand">
+      <img src="assets/img/Boo-tech-blue-logo.png" alt="Boo-Tech">
+      <span>BOO-TECH</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#products">Products</a></li>
+        <li><a href="resources.html">Free Resources</a></li>
+        <li><a href="documentation.html">Documentation</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <h1>Free HITRUST Resources</h1>
+    <p>See the quality of the work before you buy. Enter your details once and get all four resources by email.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="grid-2" style="align-items:start;">
+      <div>
+        <div class="grid-2">
+          <div class="resource-card">
+            <div class="icon">📋</div>
+            <h3>Free ISMP Policy Outline</h3>
+            <p>A starting structure for your Information Security Management Program (PDF).</p>
+          </div>
+          <div class="resource-card">
+            <div class="icon">✅</div>
+            <h3>HITRUST Readiness Checklist</h3>
+            <p>A practical checklist to gauge where your organization stands today.</p>
+          </div>
+          <div class="resource-card">
+            <div class="icon">🧾</div>
+            <h3>Evidence Collection Checklist</h3>
+            <p>The evidence types assessors ask for most often, organized by domain.</p>
+          </div>
+          <div class="resource-card">
+            <div class="icon">🗂️</div>
+            <h3>BUID Crosswalk Sample</h3>
+            <p>A sample of how BUID-mapped documentation is structured.</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <form class="capture-form" id="boo-tech-resources-form" method="POST" target="boo-tech-resources-iframe" action="https://e659984a.sibforms.com/v2/serve/MUIFAF68oFhO0RE88G2qhfzUtP7aUvAW40cRwGVGgkvUBJ8HOAg_6ux33I4KQ1xeI6-GVFq34WU1bgq4Q7XnAFlsxLts4YJcC4ADkvQOYk2c3cWx0uFIWbhQqSpMRH65mq4I-hxOwUJO4WjRzUB1Ndy-xbLarH7rXjlKbLc9a44asueayzzvRJCKO_nsC0S74kedEkA_PEtrt9lYPA==">
+          <h3 style="margin-bottom:16px;">Get all four resources</h3>
+          <label for="FIRSTNAME">First Name</label>
+          <input type="text" id="FIRSTNAME" name="FIRSTNAME" required>
+          <label for="LASTNAME">Last Name</label>
+          <input type="text" id="LASTNAME" name="LASTNAME" required>
+          <label for="EMAIL">Email</label>
+          <input type="email" id="EMAIL" name="EMAIL" required>
+          <label for="name">Company</label>
+          <input type="text" id="name" name="COMPANY:name" required>
+          <input type="text" name="email_address_check" value="" style="display:none !important" tabindex="-1" autocomplete="off">
+          <input type="hidden" name="locale" value="en">
+          <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
+          <button type="submit" class="btn btn-primary" style="width:100%;">Send Me the Resources</button>
+        </form>
+        <p class="form-success" id="resources-form-success" style="display:none; color:var(--royal-blue); margin-top:14px; margin-bottom:0;">Thanks! Check your inbox — the resources are on their way.</p>
+        <p style="font-size:0.8rem; margin-top:12px;">By submitting, you'll be added to the Boo-Tech mailing list via Brevo. Unsubscribe anytime. This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a> and <a href="https://policies.google.com/terms" target="_blank" rel="noopener">Terms of Service</a> apply.</p>
+        <iframe name="boo-tech-resources-iframe" id="boo-tech-resources-iframe" style="display:none;" title="form submission target"></iframe>
+        <script>
+          (function () {
+            var form = document.getElementById('boo-tech-resources-form');
+            var iframe = document.getElementById('boo-tech-resources-iframe');
+            var successMsg = document.getElementById('resources-form-success');
+            var hasSubmitted = false;
+
+            iframe.addEventListener('load', function () {
+              if (!hasSubmitted) return; // ignore the iframe's initial blank load
+              Array.prototype.forEach.call(form.querySelectorAll('input, button'), function (el) {
+                el.disabled = true;
+              });
+              successMsg.style.display = 'block';
+            });
+
+            form.addEventListener('submit', function (e) {
+              e.preventDefault();
+              grecaptcha.ready(function () {
+                grecaptcha.execute('6LephGgtAAAAAAckLsnCG2yakeOKh2MhZ_28B7Vw', { action: 'submit' }).then(function (token) {
+                  document.getElementById('g-recaptcha-response').value = token;
+                  hasSubmitted = true;
+                  form.submit();
+                });
+              });
+            });
+          })();
+        </script>
+        <script src="https://www.google.com/recaptcha/api.js?render=6LephGgtAAAAAAckLsnCG2yakeOKh2MhZ_28B7Vw&hl=en" async defer></script>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <img src="assets/img/Boo-tech-white-logo.png" alt="Boo-Tech" style="height:48px; margin-bottom:12px;">
+      <p style="color:rgba(255,255,255,0.6); font-size:0.9rem; max-width:280px;">Helping organizations simplify security, governance, and HITRUST readiness.</p>
+    </div>
+    <div>
+      <h4>Products</h4>
+      <ul>
+        <li><a href="products/e1.html">e1 Governance Accelerator</a></li>
+        <li><a href="products/i1.html">i1 Security Operations Accelerator</a></li>
+        <li><a href="products/r2.html">r2 Enterprise Security Accelerator</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="resources.html">Free Resources</a></li>
+        <li><a href="documentation.html">Documentation</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="documentation.html#privacy">Privacy Policy</a></li>
+        <li><a href="documentation.html#terms">Terms</a></li>
+        <li><a href="documentation.html#license">License Agreement</a></li>
+        <li><a href="documentation.html#refunds">Refund Policy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom container">
+    <span>&copy; <span id="year"></span> Boo-Tech. All rights reserved.</span>
+    <span>boo-tech.com</span>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
