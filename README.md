@@ -40,4 +40,4 @@ site/
 - The Terms of Use and Privacy Policy in `documentation.html` are generic drafts, not attorney-reviewed — have counsel review both before the site processes real orders or personal data. The License Agreement is sourced directly from the real signed license included in each product package.
 - `resources.html` and `contact.html` are both wired to Brevo (real form submissions, no more mock success messages). Test each end-to-end after deploying to the live domain to confirm the reCAPTCHA domain registration carries over.
 - Lemon Squeezy checkout links are live on all three product pages (e1, i1, r2). Test each one end-to-end (including the digital download delivery) before announcing launch.
-- Pricing is now shown on the product pages (e1 $99, i1 $499, r2 $1,999), pulled directly from the live Lemon Squeezy checkout pages. If pricing changes in Lemon Squeezy, update it here too — it isn't pulled dynamically.
+- Pricing is now shown on the product pages (e1 $99.99, i1 $499.99, r2 $1,999.99), pulled directly from the live Lemon Squeezy checkout pages. If pricing changes in Lemon Squeezy, update it here too — it isn't pulled dynamically.
