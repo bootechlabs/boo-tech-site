@@ -35,7 +35,7 @@
 <section class="page-hero">
   <div class="container">
     <h1>Free HITRUST Resources</h1>
-    <p>See the quality of the work before you buy. Enter your name and email once and all four resources land in your inbox within minutes, no waiting, no sales call.</p>
+    <p>See the quality of the work before you buy. One click through a secure checkout gets you all four resources instantly. No waiting, no sales call, completely free.</p>
   </div>
 </section>
 
@@ -75,53 +75,12 @@
         </div>
       </div>
       <div>
-        <form class="capture-form" id="boo-tech-resources-form" method="POST" target="boo-tech-resources-iframe" action="https://e659984a.sibforms.com/v2/serve/MUIFAF68oFhO0RE88G2qhfzUtP7aUvAW40cRwGVGgkvUBJ8HOAg_6ux33I4KQ1xeI6-GVFq34WU1bgq4Q7XnAFlsxLts4YJcC4ADkvQOYk2c3cWx0uFIWbhQqSpMRH65mq4I-hxOwUJO4WjRzUB1Ndy-xbLarH7rXjlKbLc9a44asueayzzvRJCKO_nsC0S74kedEkA_PEtrt9lYPA==">
+        <div class="card">
           <h3 style="margin-bottom:4px;">Get all four resources</h3>
-          <p style="font-size:0.85rem; margin-bottom:16px;">Delivered straight to your inbox, usually within a couple of minutes.</p>
-          <label for="FIRSTNAME">First Name</label>
-          <input type="text" id="FIRSTNAME" name="FIRSTNAME" required>
-          <label for="LASTNAME">Last Name</label>
-          <input type="text" id="LASTNAME" name="LASTNAME" required>
-          <label for="EMAIL">Email</label>
-          <input type="email" id="EMAIL" name="EMAIL" required>
-          <label for="name">Company <span style="font-weight:400; color:var(--text-muted);">(optional)</span></label>
-          <input type="text" id="name" name="COMPANY:name">
-          <input type="text" name="email_address_check" value="" style="display:none !important" tabindex="-1" autocomplete="off">
-          <input type="hidden" name="locale" value="en">
-          <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
-          <button type="submit" class="btn btn-primary" style="width:100%;">Send Me the Resources</button>
-        </form>
-        <p class="form-success" id="resources-form-success" style="display:none; color:var(--royal-blue); margin-top:14px; margin-bottom:0;">Thanks! Check your inbox. The resources are on their way.</p>
-        <p style="font-size:0.8rem; margin-top:12px;">By submitting, you'll be added to the Boo-Tech mailing list via Brevo. Unsubscribe anytime. This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a> and <a href="https://policies.google.com/terms" target="_blank" rel="noopener">Terms of Service</a> apply.</p>
-        <iframe name="boo-tech-resources-iframe" id="boo-tech-resources-iframe" style="display:none;" title="form submission target"></iframe>
-        <script>
-          (function () {
-            var form = document.getElementById('boo-tech-resources-form');
-            var iframe = document.getElementById('boo-tech-resources-iframe');
-            var successMsg = document.getElementById('resources-form-success');
-            var hasSubmitted = false;
-
-            iframe.addEventListener('load', function () {
-              if (!hasSubmitted) return; // ignore the iframe's initial blank load
-              Array.prototype.forEach.call(form.querySelectorAll('input, button'), function (el) {
-                el.disabled = true;
-              });
-              successMsg.style.display = 'block';
-            });
-
-            form.addEventListener('submit', function (e) {
-              e.preventDefault();
-              grecaptcha.ready(function () {
-                grecaptcha.execute('6LephGgtAAAAAAckLsnCG2yakeOKh2MhZ_28B7Vw', { action: 'submit' }).then(function (token) {
-                  document.getElementById('g-recaptcha-response').value = token;
-                  hasSubmitted = true;
-                  form.submit();
-                });
-              });
-            });
-          })();
-        </script>
-        <script src="https://www.google.com/recaptcha/api.js?render=6LephGgtAAAAAAckLsnCG2yakeOKh2MhZ_28B7Vw&hl=en" async defer></script>
+          <p style="font-size:0.85rem; margin-bottom:20px;">One click through a secure checkout, delivered instantly, completely free.</p>
+          <a href="https://bootech.lemonsqueezy.com/checkout/buy/b23c1cf6-30c1-4d8c-a6f7-dc8f69d49ab6" class="btn btn-primary" target="_blank" rel="noopener" style="width:100%; text-align:center; display:block;">Get It Free (Instant Download)</a>
+          <p style="font-size:0.8rem; margin-top:12px; margin-bottom:0;">Checkout is handled securely through Lemon Squeezy. No account or payment details required.</p>
+        </div>
       </div>
     </div>
   </div>

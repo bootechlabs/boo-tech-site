@@ -8,7 +8,7 @@ site/
   index.html            Home
   about.html            About
   contact.html          Contact (wired to Brevo, notifies via email automation)
-  resources.html         Free Resources (wired to Brevo email capture)
+  resources.html         Free Resources (wired to a Lemon Squeezy Lead Magnet checkout, not Brevo)
   documentation.html     Release notes, real license agreement, support, refund policy, generic terms/privacy drafts
   products/
     e1.html
@@ -51,6 +51,6 @@ site/
 
 ## Before going live
 - The Terms of Use and Privacy Policy in `documentation.html` are generic drafts, not attorney-reviewed — have counsel review both before the site processes real orders or personal data. The License Agreement is sourced directly from the real signed license included in each product package.
-- `resources.html` and `contact.html` are both wired to Brevo (real form submissions, no more mock success messages). Test each end-to-end after deploying to the live domain to confirm the reCAPTCHA domain registration carries over.
+- `contact.html` is wired to Brevo (real form submissions, no more mock success messages). Test it end-to-end after deploying to the live domain to confirm the reCAPTCHA domain registration carries over. `resources.html` and its four resource landing pages link out to a Lemon Squeezy Lead Magnet checkout instead: https://bootech.lemonsqueezy.com/checkout/buy/b23c1cf6-30c1-4d8c-a6f7-dc8f69d49ab6 (single free bundle covering all four resources). Update that link here and across `resources.html` plus all four `resources/*.html` pages if the Lemon Squeezy product is ever recreated.
 - Lemon Squeezy checkout links are live on all three product pages (e1, i1, r2). Test each one end-to-end (including the digital download delivery) before announcing launch.
 - Pricing is now shown on the product pages (e1 $49.99, i1 $249.99, r2 $499.99), pulled directly from the live Lemon Squeezy checkout pages. If pricing changes in Lemon Squeezy, update it here too, it isn't pulled dynamically (r2 was reduced from $1,999.99 to $999.99 to $499.99 in Sept 2026; e1 was reduced from $99.99 to $49.99 in Sept 2026; i1 was reduced from $499.99 to $249.99 in Sept 2026).
