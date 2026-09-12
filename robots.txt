@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://boo-tech.com/sitemap.xml

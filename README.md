@@ -14,6 +14,19 @@ site/
     e1.html
     i1.html
     r2.html
+  resources/              SEO landing pages, one per free resource + one per e1 domain policy
+    ismp-policy-outline.html
+    hitrust-readiness-checklist.html
+    evidence-collection-checklist.html
+    buid-crosswalk-sample.html
+    domain-01-information-protection-program.html
+    domain-13-security-awareness-training.html
+    domain-14-third-party-assurance.html
+    domain-15-incident-management.html
+    domain-17-risk-management.html
+    domain-19-data-protection-privacy.html
+  sitemap.xml            Lists every page above; update when pages are added/removed
+  robots.txt              Points crawlers at sitemap.xml
   assets/
     css/style.css
     js/main.js
@@ -40,4 +53,4 @@ site/
 - The Terms of Use and Privacy Policy in `documentation.html` are generic drafts, not attorney-reviewed — have counsel review both before the site processes real orders or personal data. The License Agreement is sourced directly from the real signed license included in each product package.
 - `resources.html` and `contact.html` are both wired to Brevo (real form submissions, no more mock success messages). Test each end-to-end after deploying to the live domain to confirm the reCAPTCHA domain registration carries over.
 - Lemon Squeezy checkout links are live on all three product pages (e1, i1, r2). Test each one end-to-end (including the digital download delivery) before announcing launch.
-- Pricing is now shown on the product pages (e1 $99.99, i1 $499.99, r2 $1,999.99), pulled directly from the live Lemon Squeezy checkout pages. If pricing changes in Lemon Squeezy, update it here too — it isn't pulled dynamically.
+- Pricing is now shown on the product pages (e1 $49.99, i1 $249.99, r2 $499.99), pulled directly from the live Lemon Squeezy checkout pages. If pricing changes in Lemon Squeezy, update it here too, it isn't pulled dynamically (r2 was reduced from $1,999.99 to $999.99 to $499.99 in Sept 2026; e1 was reduced from $99.99 to $49.99 in Sept 2026; i1 was reduced from $499.99 to $249.99 in Sept 2026).
