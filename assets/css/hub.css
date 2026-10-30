@@ -180,3 +180,10 @@ body.hub {
 /* Inline colours set for the old light-on-white palette */
 .hub [style*="--text-dark"] { color: var(--ink) !important; }
 .hub [style*="--charcoal-surface"], .hub [style*="rgba(30,34,38"] { color: var(--muted) !important; }
+
+/* Mobile: smaller headings so the hero doesn't wrap to six lines */
+@media (max-width: 600px) {
+  .hub h1 { font-size: 1.85rem; }
+  .hub h2 { font-size: 1.5rem; }
+  .hub .hero, .hub .page-hero { padding-top: 48px; padding-bottom: 48px; }
+}
