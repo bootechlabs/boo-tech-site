@@ -1,0 +1,182 @@
+/* Boo-Tech hub — neutral foundation shared with GovernedAI.
+   Loaded after style.css on index.html only; every rule is scoped to body.hub
+   so the HITRUST pages keep their current look. Tokens mirror
+   governedai-site/assets/site.css (zinc neutrals, Geist, 4/8px radii). */
+body.hub {
+  --paper: #ffffff;
+  --paper-raised: #fafafa;
+  --ink: #171717;
+  --ink-soft: #3f3f46;
+  --muted: #71717a;
+  --line: #e4e4e7;
+  --accent: #0a0a0a;
+  --accent-strong: #27272a;
+  --on-accent: #ffffff;
+  --hitrust: #0B5FB0;
+  --governedai: #DD881B;
+  --radius: 8px;
+  --font: "Geist", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  font-family: var(--font);
+  background: var(--paper);
+  color: var(--ink);
+}
+@media (prefers-color-scheme: dark) {
+  body.hub {
+    --paper: #0a0a0a;
+    --paper-raised: #18181b;
+    --ink: #ededed;
+    --ink-soft: #d4d4d8;
+    --muted: #a1a1aa;
+    --line: #27272a;
+    --accent: #ffffff;
+    --accent-strong: #e4e4e7;
+    --on-accent: #0a0a0a;
+    --hitrust: #4C9BE8;
+  }
+}
+
+.hub h1, .hub h2, .hub h3, .hub h4 { font-family: var(--font); color: var(--ink); letter-spacing: -0.01em; }
+.hub h1 { font-weight: 600; }
+.hub p { color: var(--muted); }
+.hub a { color: var(--ink); }
+.hub a:hover { color: var(--muted); }
+
+/* Logo swap: blue logo on light, white logo on dark */
+.hub .logo-dark { display: none; }
+@media (prefers-color-scheme: dark) {
+  .hub .logo-light { display: none; }
+  .hub .logo-dark { display: block; }
+}
+
+/* Header */
+.hub header.site-header {
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+  box-shadow: none;
+}
+.hub .brand span { font-family: var(--font); color: var(--ink); }
+.hub nav.main-nav a { color: var(--ink-soft); }
+.hub nav.main-nav a:hover { color: var(--ink); }
+.hub .nav-toggle { color: var(--ink); }
+@media (max-width: 780px) {
+  .hub nav.main-nav li { border-top-color: var(--line); }
+}
+
+/* Buttons */
+.hub .btn { border-radius: 4px; font-family: var(--font); }
+.hub .btn-primary { background: var(--accent); color: var(--on-accent); }
+.hub .btn-primary:hover { background: var(--accent-strong); color: var(--on-accent); }
+.hub .btn-outline { color: var(--ink); border: 1px solid var(--line); }
+.hub .btn-outline:hover { border-color: var(--ink); color: var(--ink); }
+
+/* Hero */
+.hub .hero { background: var(--paper); border-bottom: 1px solid var(--line); color: var(--ink); }
+.hub .hero h1 { color: var(--ink); }
+.hub .hero p.lead { color: var(--muted); }
+
+/* Sections and cards */
+.hub section.alt { background: var(--paper-raised); }
+.hub .card, .hub .product-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+.hub .product-card ul { color: var(--muted); }
+.hub .product-card { border-top: 3px solid var(--line); }
+.hub .product-card.governedai { border-top-color: var(--governedai); }
+.hub .product-card.hitrust { border-top-color: var(--hitrust); }
+.hub .product-card .tier-badge {
+  background: var(--paper-raised);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  font-family: var(--font);
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+/* Footer */
+.hub footer.site-footer {
+  margin-top: 0;
+  background: var(--paper-raised);
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+}
+.hub footer.site-footer h4 { color: var(--ink); }
+.hub footer.site-footer a { color: var(--muted); }
+.hub footer.site-footer a:hover { color: var(--ink); }
+.hub footer.site-footer p { color: var(--muted) !important; }
+.hub .footer-bottom { border-top-color: var(--line); }
+.hub .footer-disclaimer { color: var(--muted); }
+
+/* ---- Shared by all pages ---- */
+
+/* Fonts set inline on some pages */
+.hub [style*="Space Grotesk"] { font-family: var(--font) !important; }
+.hub [style*="color:#fff"] { color: var(--ink) !important; background: var(--paper-raised) !important; border: 1px solid var(--line); }
+
+/* Products dropdown */
+.hub nav.main-nav li { position: relative; }
+.hub nav.main-nav .sub {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: -12px;
+  min-width: 200px;
+  flex-direction: column;
+  gap: 0;
+  padding: 6px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+.hub nav.main-nav li:hover > .sub,
+.hub nav.main-nav li:focus-within > .sub { display: flex; }
+.hub nav.main-nav .sub li { padding: 0; }
+.hub nav.main-nav .sub a { display: block; padding: 8px 12px; border-radius: 4px; white-space: nowrap; }
+.hub nav.main-nav .sub a:hover { background: var(--paper-raised); }
+@media (max-width: 780px) {
+  .hub nav.main-nav .sub {
+    display: flex;
+    position: static;
+    border: none;
+    box-shadow: none;
+    padding: 0 0 0 14px;
+    background: transparent;
+  }
+  .hub nav.main-nav .sub li { border-top: none; padding: 6px 0 0; }
+}
+
+/* Sub-page hero */
+.hub .page-hero { background: var(--paper); border-bottom: 1px solid var(--line); color: var(--ink); }
+.hub .page-hero h1 { color: var(--ink); }
+.hub .page-hero p { color: var(--muted); }
+
+/* Remaining components */
+.hub section.alt { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.hub .product-card { border-top-color: var(--hitrust); }
+.hub .product-card.governedai { border-top-color: var(--governedai); }
+.hub .btn-secondary { background: var(--paper); color: var(--ink); border: 1px solid var(--line); }
+.hub .btn-secondary:hover { border-color: var(--ink); }
+.hub .resource-card { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); }
+.hub .faq-item { border-bottom-color: var(--line); }
+.hub .note-callout { background: var(--paper-raised); border: 1px solid var(--line); border-radius: var(--radius); color: var(--ink-soft); }
+.hub .deliverables li { color: var(--muted); }
+.hub form.capture-form { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); }
+.hub form.capture-form label { color: var(--ink); }
+.hub form.capture-form input, .hub form.capture-form textarea {
+  background: var(--paper);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+}
+.hub form.capture-form input:focus, .hub form.capture-form textarea:focus { border-color: var(--ink); }
+.hub .tag-strip span { background: var(--paper-raised); border: 1px solid var(--line); color: var(--ink-soft); border-radius: 4px; }
+.hub .hero .tag-strip span { color: var(--ink-soft); }
+.hub table { border-color: var(--line); }
+.hub th, .hub td { border-color: var(--line); color: var(--ink-soft); }
+
+/* Inline colours set for the old light-on-white palette */
+.hub [style*="--text-dark"] { color: var(--ink) !important; }
+.hub [style*="--charcoal-surface"], .hub [style*="rgba(30,34,38"] { color: var(--muted) !important; }
